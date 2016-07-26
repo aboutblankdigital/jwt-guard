@@ -15,7 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-      "AboutBlank\\JWTGuard\\": "src/"
+      "AboutBlankDigital\\JWTGuard\\": "src/"
     }
   }
 }
