@@ -33,6 +33,14 @@ class AuthenticateJwt
             return response()->json('Request must accept a json response.', 422);
         }
 
-        return $next($request);
+        $response = $next($request);
+
+        if (Auth::guard($guard)->enableTokenReissue) {
+            $newToken = Auth::guard($guard)->issueToken(Auth::guard($guard)->user());
+            Auth::guard($guard)->blacklistToken();
+            $response->headers->set('Authorization', 'Bearer '.$newToken['api_token']);
+        }
+
+        return $response;
     }
 }

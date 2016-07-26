@@ -25,7 +25,8 @@ class AuthServiceProvider extends ServiceProvider
                     config('jwt.secret_key'),
                     config('jwt.jwt_token_duration'),
                     config('jwt.enable_refresh_token'),
-                    config('jwt.refresh_token_duration')
+                    config('jwt.refresh_token_duration'),
+                    config('jwt.enable_token_reissue')
                 )
             );
         });
@@ -38,7 +39,8 @@ class AuthServiceProvider extends ServiceProvider
                     config('jwt.secret_key'),
                     config('jwt.jwt_token_duration'),
                     config('jwt.enable_refresh_token'),
-                    config('jwt.refresh_token_duration')
+                    config('jwt.refresh_token_duration'),
+                    config('jwt.enable_token_reissue')
                 )
             );
         });

@@ -22,6 +22,8 @@ class JWTManager
 
     public $jwtRefreshTokenDuration;
 
+    public $enableTokenReissue;
+
     const API_TOKEN = UserJWT::class;
     const REFRESH_TOKEN = RefreshJWT::class;
     const COMMON_TOKEN = CommonJWT::class;
@@ -30,12 +32,13 @@ class JWTManager
      * JWTManager constructor.
      * @param $key
      */
-    public function __construct($key, $jwtTokenDuration, $enableRefreshToken, $jwtRefreshTokenDuration)
+    public function __construct($key, $jwtTokenDuration, $enableRefreshToken, $jwtRefreshTokenDuration, $enableTokenReissue)
     {
         $this->key = $key;
         $this->jwtTokenDuration = $jwtTokenDuration  * 60;
         $this->enableRefreshToken = $enableRefreshToken;
         $this->jwtRefreshTokenDuration = $jwtRefreshTokenDuration * 86400;
+        $this->enableTokenReissue = $enableTokenReissue;
     }
 
     public function issue(array $data = [])

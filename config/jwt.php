@@ -45,6 +45,17 @@ return [
     |
     */
 
-    'refresh_token_duration' => 14
+    'refresh_token_duration' => 14,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Enable reissue
+    |--------------------------------------------------------------------------
+    |
+    | Enable the automatic blacklisting and reissuing of tokens.
+    |
+    */
+
+    'enable_token_reissue' => true,
 
 ];
