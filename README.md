@@ -33,6 +33,15 @@ Finally publish package's configuration file:
 
 Then the file `config/jwt.php` will be created.
 
+### **JWT Token reissue**
+By default after each successful request, the active token gets blacklisted and a new token is issued and sent back to the client through the response headers.
+You can disable this by updating the following setting in the config file `config/jwt.php`:
+```
+...
+'enable_token_reissue' => true,
+...
+```
+
 ## **JWT Guard**
 
 ### **JWT driver setup!**
