@@ -52,4 +52,21 @@ class JWTGuard implements Guard, JWTGuardInterface
 
         return response()->json('Unauthorized.', 401);
     }
+
+    public function reissueToken()
+    {
+        if (! $this->jwtManager->enableTokenReissue)
+            return null;
+
+        if ($this->token() instanceof CommonJWT && $this->validateToken() === true) {
+            $user = $this->provider->retrieveById($this->token()->get()->user->id);
+            $newToken = $this->issueToken($user);
+
+            $this->token()->blacklist();
+
+            return $newToken;
+        }
+
+        return null;
+    }
 }

@@ -35,9 +35,7 @@ class AuthenticateJwt
 
         $response = $next($request);
 
-        if (Auth::guard($guard)->enableTokenReissue) {
-            $newToken = Auth::guard($guard)->issueToken(Auth::guard($guard)->user());
-            Auth::guard($guard)->blacklistToken();
+        if ($newToken = Auth::guard($guard)->reissueToken()) {
             $response->headers->set('Authorization', 'Bearer '.$newToken['api_token']);
         }
 
