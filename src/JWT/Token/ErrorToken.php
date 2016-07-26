@@ -1,6 +1,6 @@
 <?php
 
-namespace AboutBlank\JWTGuard\JWT\Token;
+namespace AboutBlankDigital\JWTGuard\JWT\Token;
 
 
 class ErrorToken implements TokenInterface

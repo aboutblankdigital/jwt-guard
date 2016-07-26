@@ -1,10 +1,10 @@
 <?php
 
-namespace AboutBlank\JWTGuard\Auth;
+namespace AboutBlankDigital\JWTGuard\Auth;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
-use AboutBlank\JWTGuard\JWT\JWTManager;
-use AboutBlank\JWTGuard\Support\Serializer;
+use AboutBlankDigital\JWTGuard\JWT\JWTManager;
+use AboutBlankDigital\JWTGuard\Support\Serializer;
 
 class AuthServiceProvider extends ServiceProvider
 {

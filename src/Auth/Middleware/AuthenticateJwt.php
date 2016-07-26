@@ -1,10 +1,10 @@
 <?php
 
-namespace AboutBlank\JWTGuard\Auth\Middleware;
+namespace AboutBlankDigital\JWTGuard\Auth\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
-use AboutBlank\JWTGuard\Auth\JWTGuard;
+use AboutBlankDigital\JWTGuard\Auth\JWTGuard;
 
 class AuthenticateJwt
 {

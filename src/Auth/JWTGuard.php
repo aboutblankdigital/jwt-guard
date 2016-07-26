@@ -1,14 +1,14 @@
 <?php
 
-namespace AboutBlank\JWTGuard\Auth;
+namespace AboutBlankDigital\JWTGuard\Auth;
 
 use Illuminate\Auth\GuardHelpers;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\UserProvider;
-use AboutBlank\JWTGuard\JWT\Token\CommonJWT;
-use AboutBlank\JWTGuard\JWT\Token\RefreshJWT;
-use AboutBlank\JWTGuard\JWT\JWTManager;
+use AboutBlankDigital\JWTGuard\JWT\Token\CommonJWT;
+use AboutBlankDigital\JWTGuard\JWT\Token\RefreshJWT;
+use AboutBlankDigital\JWTGuard\JWT\JWTManager;
 
 class JWTGuard implements Guard, JWTGuardInterface
 {

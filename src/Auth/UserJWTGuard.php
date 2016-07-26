@@ -1,15 +1,15 @@
 <?php
 
-namespace AboutBlank\JWTGuard\Auth;
+namespace AboutBlankDigital\JWTGuard\Auth;
 
 use Illuminate\Auth\GuardHelpers;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\UserProvider;
-use AboutBlank\JWTGuard\JWT\Token\RefreshJWT;
-use AboutBlank\JWTGuard\JWT\Token\UserJWT;
-use AboutBlank\JWTGuard\Support\Facades\Serializer;
-use AboutBlank\JWTGuard\JWT\JWTManager;
+use AboutBlankDigital\JWTGuard\JWT\Token\RefreshJWT;
+use AboutBlankDigital\JWTGuard\JWT\Token\UserJWT;
+use AboutBlankDigital\JWTGuard\Support\Facades\Serializer;
+use AboutBlankDigital\JWTGuard\JWT\JWTManager;
 
 class UserJWTGuard implements Guard, JWTGuardInterface
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace AboutBlank\JWTGuard\Auth;
+namespace AboutBlankDigital\JWTGuard\Auth;
 
 use Illuminate\Http\Request;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
-use AboutBlank\JWTGuard\JWT\Token\CommonJWT;
-use AboutBlank\JWTGuard\JWT\Token\RefreshJWT;
-use AboutBlank\JWTGuard\JWT\Token\UserJWT;
-use AboutBlank\JWTGuard\JWT\Token\ErrorToken;
+use AboutBlankDigital\JWTGuard\JWT\Token\CommonJWT;
+use AboutBlankDigital\JWTGuard\JWT\Token\RefreshJWT;
+use AboutBlankDigital\JWTGuard\JWT\Token\UserJWT;
+use AboutBlankDigital\JWTGuard\JWT\Token\ErrorToken;
 
 trait JWTGuardTrait
 {

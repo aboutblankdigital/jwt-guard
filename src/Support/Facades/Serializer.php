@@ -1,6 +1,6 @@
 <?php
 
-namespace AboutBlank\JWTGuard\Support\Facades;
+namespace AboutBlankDigital\JWTGuard\Support\Facades;
 
 
 use Illuminate\Support\Facades\Facade;

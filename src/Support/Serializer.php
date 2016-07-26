@@ -1,6 +1,6 @@
 <?php
 
-namespace AboutBlank\JWTGuard\Support;
+namespace AboutBlankDigital\JWTGuard\Support;
 
 
 

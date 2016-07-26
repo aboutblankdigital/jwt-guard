@@ -1,6 +1,6 @@
 <?php
 
-namespace AboutBlank\JWTGuard\Auth;
+namespace AboutBlankDigital\JWTGuard\Auth;
 
 use Illuminate\Http\Request;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;

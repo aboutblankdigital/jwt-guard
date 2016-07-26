@@ -24,12 +24,12 @@ Next, update Composer from the Terminal:
 Once the package's installation completes, the final step is to add the service provider. Open `config/app.php`, and add a new item to the providers array:
 
 ```
-AboutBlank\JWTGuard\Auth\AuthServiceProvider::class,
+AboutBlankDigital\JWTGuard\Auth\AuthServiceProvider::class,
 ```
 
 Finally publish package's configuration file:
 
-    php artisan vendor:publish --provider="AboutBlank\JWTGuard\Auth\AuthServiceProvider"
+    php artisan vendor:publish --provider="AboutBlankDigital\JWTGuard\Auth\AuthServiceProvider"
 
 Then the file `config/jwt.php` will be created.
 
@@ -77,12 +77,12 @@ You can use any `Eloquent` provider that you want.
 
 ###**Using JWT Middleware**
 
-if you need to validate JWT token request just add `AboutBlank\JWTGuard\Auth\Middleware\AuthenticateJwt::class` to `routeMiddleware` on `Http/Kernel.php` file:
+if you need to validate JWT token request just add `AboutBlankDigital\JWTGuard\Auth\Middleware\AuthenticateJwt::class` to `routeMiddleware` on `Http/Kernel.php` file:
 
 ```
 protected $routeMiddleware = [
         ...
-        'auth-jwt' => \AboutBlank\JWTGuard\Auth\Middleware\AuthenticateJwt::class,
+        'auth-jwt' => \AboutBlankDigital\JWTGuard\Auth\Middleware\AuthenticateJwt::class,
         ...
     ];
 ```
