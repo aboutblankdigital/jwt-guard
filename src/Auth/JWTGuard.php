@@ -25,7 +25,7 @@ class JWTGuard implements Guard, JWTGuardInterface
     public function getUserFromToken()
     {
         if ($this->token() instanceof CommonJWT && $this->validateToken() === true) {
-            return $this->provider->retrieveById($this->token()->get()->id);
+            return $this->provider->retrieveById($this->token()->get()->user->id);
         }
 
         return null;
@@ -34,7 +34,7 @@ class JWTGuard implements Guard, JWTGuardInterface
     public function refreshToken()
     {
         if ($this->token() instanceof RefreshJWT && $this->validateToken() === true) {
-            $user = $this->provider->retrieveById($this->token()->get() ->user_id);
+            $user = $this->provider->retrieveById($this->token()->get()->user->id);
             return $user;
             $this->token()->blacklist();
             return $this->issueToken($user);
